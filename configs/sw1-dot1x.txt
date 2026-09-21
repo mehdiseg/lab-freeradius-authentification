@@ -1,0 +1,8 @@
+configure terminal
+dot1x system-auth-control
+aaa authentication dot1x default group radius
+interface f0/5
+ switchport mode access
+ authentication port-control auto
+ dot1x pae authenticator
+end
