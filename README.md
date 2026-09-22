@@ -1,6 +1,8 @@
 # Lab sécurité : authentification centralisée avec FreeRADIUS
 
 > **Statut : à réaliser.** Ce guide est préparé à partir de la documentation officielle et de mes cours ; **je ne l'ai pas encore rejoué de bout en bout**. Les commandes sont à valider en le faisant, et le journal en bas de page sera complété avec mes résultats réels (captures, erreurs rencontrées, corrections).
+>
+> **Commandes vérifiées :** ce guide a été rejoué dans un conteneur Debian 13 (22 septembre 2026) avec le vrai FreeRADIUS : `freeradius -C` valide la configuration, le serveur démarre en mode debug et charge le client `sw1`, et `radtest` confirme un `Access-Accept` avec le bon mot de passe, un `Access-Reject` avec un mauvais mot de passe, avec un utilisateur inconnu, et avec un secret partagé incorrect. La partie 802.1X (matériel réel requis) n'a pas pu être vérifiée. Vérifié ne veut pas dire réalisé : c'est l'assistant IA qui a préparé ce guide qui a rejoué ces commandes dans un conteneur jetable, pas moi sur mon propre lab. Le journal ci-dessous reste à remplir une fois que je l'aurai fait moi-même.
 
 ## Objectif
 
